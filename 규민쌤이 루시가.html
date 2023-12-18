@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./일본인이래요.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <a href="#">
+        <div class="up">UP</div>
+    </a>
+    <div class="header">
+        <div class="logo">oceanus</div>
+        <input type="checkbox" id="meun">
+        <label for="meun" id="meun_">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <div class="meun_box"></div>
+        <div class="line_header"></div>
+    </div>
+    <div class="main">
+        <div class="visual_group">
+            <div class="visual_box">
+                <div class="visual">
+                <div class="visual_img"></div>
+            </div>
+        </div>
+        <div class="content1">
+            <div class="cont1">
+                <div class="cont1_txt1">
+                    <p>commentarius hodie</p>
+                </div>
+                <div class="cont1_txt2">
+                    <p>
+                        Magister Gyumin hodie <br>
+                        Dixit se emere mihi viridis uvae 
+                    </p>
+                    <p>Candy pollicitus sum</p>
+                </div>
+                <div class="cont1_btton">Singula</div>
+            </div>
+        </div>
+        <div class="content2">
+            <div class="cont2">
+                <div class="cont2_txt_box">
+                    <div class="cont2_txt1">
+                        <p>commentarius hodie</p>
+                    </div>
+                    <div class="cont2_txt2">
+                        <p>Volo ire in domum suam</p>
+                        <p>Desidero meum,</p>
+                        <p>suus 'non fun</p>
+                        <p>Ego sollicitos <br>esse tergum</p>
+                    </div>
+                    <div class="cont2_btton">Singula</div>
+                </div>
+                <div class="slide_box">
+                    <div class="slide_group">
+                        <div class="slide">
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                        </div>
+                        <div class="slide">
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content3">
+            <div class="cont3">
+
+            </div>
+        </div>
+    </div>
+    <script>
+        window.addEventListener('scroll', function(){
+            console.log( window.scroll)
+            if(window.scrollY <= 1500){
+                $(".logo").css('color', 'white')
+                $("#meun_ span").css('background-color', 'white')
+            }
+            if(window.scroll>= 1500){
+                $(".logo").css('color', 'black')
+                $("#meun_ span").css('background-color', 'black')
+            }
+        });
+    </script>
+</body>
+</html>

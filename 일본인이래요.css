@@ -1,0 +1,359 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+body{
+    width: 1920px;
+    overflow-x: hidden;
+}
+@font-face {
+    font-family: 'LOTTERIADDAG';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIADDAG.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+/*----------------------------------------------------------------------*/
+.up{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    background-color: #0049a0;
+    right: 50px;
+    bottom: 50px;
+    z-index: 10;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+}
+/*----------------------------------------------------------------------*/
+.header{
+    width: 1920px;
+    height: 80px;
+    position: fixed;
+    z-index: 1;
+}
+#meun{
+    display: none;
+}
+#meun + label{
+    display: block;
+    width: 50px;
+    height: 24px;
+    position: absolute;
+    cursor: pointer;
+    transition: all .35s;
+    z-index: 2;
+    right: 10px;
+    top: 25px;
+}
+#meun + label span{
+    display: block;
+    width: 40px;
+    height: 2px;
+    border-radius: 30px;
+    background-color: white;
+    transition: all .35s;
+    left: 5px;
+    position: absolute;
+}
+#meun + label span:nth-child(1){
+    top: 0;
+}
+#meun + label span:nth-child(2){
+    top: 50%;
+    transform: translateY(-50%);
+}
+#meun + label span:nth-child(3){
+    bottom: 0;
+}
+#meun:checked + label span:nth-child(1){
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    background-color: #0049a0;
+
+}
+#meun:checked + label span:nth-child(2){
+    opacity: 0;
+    background-color: #0049a0;
+}
+#meun:checked + label span:nth-child(3){
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+    background-color: #0049a0;
+}
+.meun_box{
+    width: 300px;
+    height: 1080px;
+    background-color: rgba(255, 255, 255, 80%);
+    position: absolute;
+    right: -300px;
+    transition: all .35s;
+}
+#meun:checked ~ .meun_box{
+    right: 0px;
+}
+.logo{
+    font-family: "LOTTERIADDAG";
+    font-size: 40px;
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10px;
+    transition: all .35s;
+}
+.line_header{
+    width: 0px;
+    height: 1px;
+    position: absolute;
+    background-color: white;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .7s;
+}
+.header:hover .line_header{
+    width: 1920px;
+}
+#meun:checked ~ .line_header{
+    width: 1920px;
+}
+/*----------------------------------------------------------------------*/
+.visual_box{
+    width: 1920px;
+    height: 900px;
+    position: relative;
+}
+.visual_img{
+    width: 1920px;
+    height: 900px;
+    background-image: linear-gradient(to bottom, rgba(000, 000, 000, 80%) 1%, rgba(000, 000, 000, 0%) 30%);
+    position: absolute;
+}
+.visual{
+    width: 1920px;
+    height: 900px;
+    background-image: url(./img/waves-1215449_1280.jpg);
+    object-fit: contain;
+    background-size: 1920px;
+    position: absolute;
+    background-attachment: fixed;
+}
+/*----------------------------------------------------------------------*/
+.content1{
+    width: 1920px;
+    height: 550px;
+    background-color: rgb(29, 29, 31);
+    position: relative;
+}
+.cont1{
+    width: 1400px;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+.cont1_txt1{
+    position: absolute;
+    top: 120px;
+}
+.cont1_txt1 p{
+    width: 1400px;
+    color: white;
+    font-family: "LOTTERIADDAG";
+    text-align: center;
+    font-size: 18px;
+}
+.cont1_txt2 p{
+    width: 1400px;
+    color: white;
+    font-family: "LOTTERIADDAG";
+    font-size: 30px;
+    text-align: center;
+    line-height: 55px;
+    color: rgb(177, 177, 177);
+    font-weight: bold;
+    top: 80px;
+}
+.cont1_txt2{
+    position: absolute;
+    top: 180px;
+}
+.cont1_txt2 p:nth-child(2){
+    color: white;
+}
+.cont1_btton{
+    width: 180px;
+    height: 50px;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50px 50px 50px 50px;
+    top: 400px;
+    text-align: center;
+    color: #0049a0;
+    line-height: 50px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: all .35s;
+}
+.cont1_btton:hover{
+    background-color: #0049a0;
+    color: white;
+}
+/*----------------------------------------------------------------------*/
+.content2{
+    width: 1920px;
+    height: 1080px;
+    position: relative;
+    background-image: linear-gradient(to bottom, rgba(29, 29, 31, 100%) 1%, rgba(29, 29, 31, 0%) 12%);
+    background-color: white;
+}
+.cont2{
+    width: 1400px;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+.cont2_txt1{
+    position: absolute;
+    top: 400px;
+    left: 40px;
+}
+.cont2_txt1 p{
+    width: 1400px;
+    color: rgb(0, 0, 0);
+    font-family: "LOTTERIADDAG";
+    font-size: 18px;
+}
+.cont2_txt2 p{
+    width: 1400px;
+    font-family: "LOTTERIADDAG";
+    font-size: 30px;
+    line-height: 55px;
+    font-weight: bold;
+}
+.cont2_txt2{
+    position: absolute;
+    top: 500px;
+    left: 40px;
+}
+.cont2_txt2 p:nth-child(1){
+    color: rgb(177, 177, 177);
+}
+.cont2_txt2 p:nth-child(2){
+    color: rgb(177, 177, 177);
+}
+.cont2_txt2 p:nth-child(3){
+    color: rgb(177, 177, 177);
+}
+.cont2_txt2 p:nth-child(4){
+    color: black;
+}
+
+.cont2_btton{
+    width: 180px;
+    height: 50px;
+    position: absolute;
+    border-radius: 50px 50px 50px 50px;
+    top: 850px;
+    text-align: center;
+    color: white;
+    line-height: 50px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: all .35s;
+    background-color: #0049a0;
+    left: 40px;
+}
+.cont2_btton:hover{
+    color: #0049a0;
+    background-color: white;
+    border: #0049a0 solid 1px;
+}
+.slide_box{
+    width: 600px;
+    height: 820px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+}
+.slide_group{
+    display: flex;
+    width: 100%;
+    height: 1650px;
+    position: relative;
+}
+.slide{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+}
+.slide:nth-child(1){
+    left: 0;
+    animation: slide1 9s infinite;
+}
+.slide:nth-child(2){
+    right: 0;
+    animation: slide2 9s infinite;
+}
+.card{
+    width: 250px;
+    height: 350px;
+    background-image: url(./img/waves-1215449_1280.jpg);
+    border-radius: 20px 20px 20px 20px;
+    margin-left: 25px;
+    margin-top: 50px;
+}
+.slide:nth-child(1) .card:nth-child(1){
+    margin-top: 0px;
+}
+.slide:nth-child(2) .card:nth-child(1){
+    margin-top: 100px;
+}
+@keyframes slide1{
+    0%{
+        top: 0;
+    }
+    50%{
+        top: -43%;
+    }
+    100%{
+        top: 0;
+    }
+}
+@keyframes slide2{
+    0%{
+        top: -53%;
+    }
+    50%{
+        top: 0px;
+    }
+    100%{
+        top: -53%;
+    }
+}
+.slide_box:hover .slide{
+    animation-play-state: paused;
+}
+/*----------------------------------------------------------------------*/
+.content3{
+    width: 1920px;
+    height: 1080px;
+    background-color: white;
+    position: relative;
+    background-image: url(./img/aa.jpg);
+    background-size: 1920px 1080px;
+}
+.cont3{
+    width: 1400px;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+}
